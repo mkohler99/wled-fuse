@@ -28,3 +28,17 @@ You can use the device like this with its built in AP mode, but your phone may b
 **4.**  Reconnect your device to your home's Wifi network.
 
 **5.**  Check the device list in your router's user interface for the IP of the WLED device within your local network. Alternatively, the device will advertise itself with mDNS as **fuse.local** so in theory, just enter that in your address bar and it should take you to the GUI. Failing that, use the WLED app (free on the App Store, as it is able to discover WLED boards without knowing the IP! Have fun with the WLED software!
+
+# WLED on your own
+If you want to install WLED fresh, you can connect your board over USB-C to a computer and reinstall WLED from [this website](https://install.wled.me) which uses 'Web Serial' (which is a real web API for communicating with locally plugged in serial devices) to reprogram the board. It's WILD how easy they made this process. 
+
+After flashing, only the 'F' will light up because WLED does not know about the other GPIO pins I used in my custom layout. As an exercise, I broke each letter out into its own 'pin' off the microcontroller [(Schematic for those interested)](https://github.com/mkohler99/wled-fuse/blob/main/Electronics/Drawings/Fuse%20LED%20Board%20Schematic.pdf), so in the LED settings you'll need to set up the following LED outputs:
+
+ 1. Pin 16 - 10 LEDs - Type WS281X - GRB
+ 2. Pin 17 - 10 LEDs - Type WS281X - GRB
+ 3. Pin 18 - 10 LEDs - Type WS281X - GRB
+ 4. Pin 19 - 11 LEDs - Type WS281X - GRB
+ ==Fun Fact: The 'E' in the fuse logo has the most squares by one==
+
+If you'd like to just reload my configuration file, you can find it linked [here.](https://github.com/mkohler99/wled-fuse/blob/main/Config/wled_cfg_fuse.json) You can upload a config file from the 'Security and Updates' tab at the bottom of the web GUI.
+ 
