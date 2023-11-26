@@ -12,7 +12,13 @@ I make no claims about the reliability or color accuracy of WLED, however I thin
  - Automatic wifi setup 
 
 # How to connect
-When the device boots, it attempts to connect to its last known wifi network. In most cases, when you first power up your board, it will not connect automatically. In this case, the board will create its own hotspot with the SSID **WLED-FUSE** in order to connect to the onboard hotspot, you will need to enter the default WLED password, **wled1234** you should then be automatically redirected to the WLED GUI which self hosts at **4.3.2.1** (which is a bit of a strange vanity IP, but I guess since they are the router they can do whatever they want) 
+When the device boots, it attempts to connect to its last known wifi network. In most cases, when you first power up your board, it will not connect automatically. In this case, the board will create its own hotspot with the SSID **WLED-FUSE** 
+
+<img src="https://github.com/mkohler99/wled-fuse/assets/7109569/c04582c6-1c5b-4f44-a3cd-f1649a3212e2" width="300">
+
+in order to connect to the onboard hotspot, you will need to enter the default WLED password, **wled1234** you should then be automatically redirected to the WLED GUI which self hosts at **4.3.2.1** (which is a bit of a strange vanity IP, but I guess since they are the router they can do whatever they want)
+
+<img src="https://github.com/mkohler99/wled-fuse/assets/7109569/ce9a0fc8-c21d-43f2-a593-ef93b796c3a5" width="300">
 
 You can use the device like this with its built in AP mode, but your phone may be weird about being connected to wifi that doesn't go anywhere, so you may want to connect the board to a real wifi network. 
 
@@ -22,13 +28,19 @@ You can use the device like this with its built in AP mode, but your phone may b
 
 **1.**  Click on the  _Config_  (gear) icon to edit your WLED module settings and choose 'Wifi Setup'.
 
-**2.**  For most home networks, simply enter your Wifi network's name and network password. You can also change the mDNS address for your WLED module here. By default, I've made it **fuse.local** so once your device is connected, you should just be able to enter that into your browser and you're off to the races. 
+<img src="https://github.com/mkohler99/wled-fuse/assets/7109569/0987abeb-9787-4672-b689-7cd440c8ebc9" width="300">
 
-**3.**  Click Save & Connect at the bottom of the page.
+**2.**  For most home networks, simply enter your Wifi network's name and network password. You can also change the mDNS address for your WLED module here. By default, I've made it **fuse.local** so once your device is connected, you should just be able to enter that into your browser and you're off to the races. You can also 'Scan' for available networks and enter the password to any you find.
+
+<img src="https://github.com/mkohler99/wled-fuse/assets/7109569/6371efe8-7363-4e86-9ba5-2f32cf373a9d" width="300">
+
+**3.**  Click Save & Connect at the top of the page.
 
 **4.**  Reconnect your device to your home's Wifi network.
 
 **5.**  Check the device list in your router's user interface for the IP of the WLED device within your local network. Alternatively, the device will advertise itself with mDNS as **fuse.local** so in theory, just enter that in your address bar and it should take you to the GUI. Failing that, use the WLED app (free on the App Store, as it is able to discover WLED boards without knowing the IP! Have fun with the WLED software!
+
+<img src="https://github.com/mkohler99/wled-fuse/assets/7109569/addd6d01-5285-4210-a5ce-eaecd5466a5a" width="300">
 
 # WLED Tips:
 **1** Whatever is saved into preset 1 will load on boot, making the board's power up preset / effect customizable. 
@@ -49,6 +61,11 @@ After flashing, only the 'F' will light up because WLED does not know about the 
  2. Pin 17 - 10 LEDs - Type WS281X - GRB
  3. Pin 18 - 10 LEDs - Type WS281X - GRB
  4. Pin 19 - 11 LEDs - Type WS281X - GRB
+
+Here's a screenshot of some of the settings
+
+<img src="https://github.com/mkohler99/wled-fuse/assets/7109569/6ab77799-0e7c-4429-85c6-723cd2252e09" width="900">
+
  
  **Fun Fact: The 'e' in the fuse logo has the most squares by one, with the logo in total made up of 41 squares, 4 being small, 11 being medium sized, and the remainder being large**
 
