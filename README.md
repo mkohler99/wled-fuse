@@ -3,7 +3,7 @@
 # WTF?
 Happy holidays, If you're reading this the odds are you received one of my um, holiday cards? and have scanned the QR code on the back. This is some documentation for how to use WLED specifically in the context of this board.
 # About WLED
-WLED Is an open source RGB Pixel LED controller made by smart people on the internet. Information about the WLED project can be found here: [WLED Github Page]  (https://github.com/Aircoookie/WLED)
+WLED Is an open source RGB Pixel LED controller made by smart people on the internet. Information about the WLED project can be found here: [WLED Github Page](https://github.com/Aircoookie/WLED)
 I make no claims about the reliability or color accuracy of WLED, however I think it's a really neat project and saved me having to even think about the software for this project (no thoughts, head empty, just solder LED and exist). WLED has some neat features that make it great for making fun LED toys. In no particular order:
 
  - Wifi Control with built in Web GUI
@@ -49,7 +49,8 @@ After flashing, only the 'F' will light up because WLED does not know about the 
  2. Pin 17 - 10 LEDs - Type WS281X - GRB
  3. Pin 18 - 10 LEDs - Type WS281X - GRB
  4. Pin 19 - 11 LEDs - Type WS281X - GRB
- ==Fun Fact: The 'e' in the fuse logo has the most squares by one, with the logo in total made up of 41 squares, 4 being small, 11 being medium sized, and the remainder being large==
+ 
+ **Fun Fact: The 'e' in the fuse logo has the most squares by one, with the logo in total made up of 41 squares, 4 being small, 11 being medium sized, and the remainder being large**
 
 If you'd like to just reload my configuration file, you can find it linked [here.](https://github.com/mkohler99/wled-fuse/blob/main/Config/wled_cfg_fuse.json) You can upload a config file from the 'Security and Updates' tab at the bottom of the web GUI.
  
