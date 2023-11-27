@@ -2,6 +2,10 @@
 # wled-fuse
 # WTF?
 Happy holidays, If you're reading this the odds are you received one of my um, holiday cards? and have scanned the QR code on the back. This is some documentation for how to use WLED specifically in the context of this board.
+
+<img width="600" alt="Screenshot 2023-11-26 at 10 26 15 PM" src="https://github.com/mkohler99/wled-fuse/assets/7109569/646bce5f-b73c-4c1a-bfbb-7534eb45423c">
+
+
 # About WLED
 WLED Is an open source RGB Pixel LED controller made by smart people on the internet. Information about the WLED project can be found here: [WLED Github Page](https://github.com/Aircoookie/WLED)
 I make no claims about the reliability or color accuracy of WLED, however I think it's a really neat project and saved me having to even think about the software for this project (no thoughts, head empty, just solder LED and exist). WLED has some neat features that make it great for making fun LED toys. In no particular order:
@@ -75,7 +79,15 @@ If you'd like to just reload my configuration file, you can find it linked [here
 This board has a number of interesting features that were either complicated or expensive to implement, but were ultimately added in order to make the project more interesting
 
  - 3 Sizes of LEDs: In order to accurately replicate the FUSE logo, 3 sizes of RGB pixel LED's were used. Care was taken to use LED's that were electrically identical and because they speak the same protocol could be included in the same string of LEDs. Additional care was taken to find LEDs with built in decoupling capacitors. Older generations of LED pixels would require a capacitor soldered onto the board for each LED, but newer generations include this inside the LED. [Here is a link to a video of the factory of how these LEDs are made](https://www.youtube.com/watch?v=pMjhJ9kcaU4&pp=ygUOd3MyODEyIGZhY3Rvcnk=) finding the right features of LED's involved uploading Chinese part spec sheets into google translate and seeing if additional components were not needed as per the data sheets. An early LED test board was made to prove that different size LEDs could exist on the same data chain.
-- 4 Layer board with all components on one side: This makes the boards easier to hand assemble and solder with a hotplate. The process is straightforward: Solder paste is applied with a stencil, Components are placed on the board (by hand!), the board is then heated on a hot plate to 165*C for about a minute and the solder liquifies and flows onto the pads of the components. Afterwards, a bit of touch up with a normal soldering iron is sometimes required (Usually on the USB connector) 
+
+<img width="400" alt="Screenshot 2023-11-26 at 10 28 42 PM" src="https://github.com/mkohler99/wled-fuse/assets/7109569/abc831c9-6717-480c-932b-29a3381a3b16">
+
+
+- 4 Layer board with all components on one side: This makes the boards easier to hand assemble and solder with a hotplate. The process is straightforward: Solder paste is applied with a stencil, Components are placed on the board (by hand!), the board is then heated on a hot plate to 165*C for about a minute and the solder liquifies and flows onto the pads of the components. Afterwards, a bit of touch up with a normal soldering iron is sometimes required (Usually on the USB connector)
+
+<img width="400" alt="Screenshot " src="https://github.com/mkohler99/wled-fuse/assets/7109569/dc657972-cc7b-4693-b7c0-55eb837a795b">
+
+
 - USB C Connector: This complicated things quite a bit, but since USB C is the future I wanted to prove that I could make a board that works over USB C. The pitch of the contacts is incredibly fine so even with care applying solder paste, shorts usually occur and needed to be cleaned up by hand, but I got way better at soldering these the more I did so mission successful there. An early LED test board was made to prove I was able to reliably solder this connector.
 - In circuit programming: The board plugs into USB C and can be programmed with the default Platform IO IDE or the online WebSerial installer for WLED. There are no confusing boot/reset buttons because a clever array of transistors manage the proper logic for placing the chip into programming mode when the correct DTR/RTS pins on the serial port are used.  A more cost optimized version of this board would likely have an unpopulated header on the board that connects to an external programming device during flashing that is not included in the final product. An early LED test board was made to prove that I had this logic correct before committing to making boards with all the finished components.
 
